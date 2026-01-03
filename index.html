@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>GWX VISION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="LogoGwxVision.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #c9a24d;
+      --bg: #050505;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background-color: var(--bg);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 10% 10%, #1a150a 0%, transparent 30%);
+      z-index: -1;
+    }
+
+    /* NAVBAR AJUSTADA */
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      padding: 10px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img { height: 100%; border-radius: 50%; }
+    
+    /* Nome da empresa maior */
+    .logo span { 
+      font-weight: 600; 
+      letter-spacing: 2px; 
+      font-size: 1.4rem; /* Aumentado */
+      white-space: nowrap;
+    }
+
+    .social-nav a {
+      color: #fff;
+      margin-left: 20px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+
+    .social-nav a:hover { color: var(--primary); opacity: 1; transform: translateY(-3px); }
+
+    .container {
+      max-width: 1200px; /* Aumentado para comportar cards maiores */
+      margin: auto;
+      padding: 150px 20px 80px;
+    }
+
+    .hero {
+      text-align: left;
+      margin-bottom: 80px;
+      max-width: 850px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.1;
+      margin-bottom: 25px;
+      background: linear-gradient(to right, #fff, #888);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p { font-size: 1.2rem; color: #a0a0a0; }
+
+    /* CARDS AJUSTADOS */
+    .section-label {
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 1rem;
+      margin-bottom: 40px;
+      display: block;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Largura mínima aumentada */
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 24px;
+      transition: 0.4s;
+      position: relative;
+      display: flex; /* Flexbox para alinhar conteúdo */
+      flex-direction: column;
+      min-height: 220px; /* Garante altura uniforme mínima */
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+      background: rgba(201, 162, 77, 0.05);
+      transform: translateY(-8px);
+    }
+
+    .card h3 { font-size: 1.6rem; margin-bottom: 15px; white-space: nowrap; }
+    .card p { color: #888; margin-bottom: 25px; font-size: 0.95rem; }
+    
+    /* BOTÃO FIXO NO RODAPÉ DO CARD */
+    .card a {
+      margin-top: auto; /* Joga o botão para baixo */
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .card a:hover { letter-spacing: 2px; }
+
+    .social-footer {
+      margin-top: 100px;
+      text-align: center;
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      width: 50px; height: 50px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; color: #fff; transition: 0.4s;
+    }
+
+    .social-icons a:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    .disabled { opacity: 0.4; cursor: not-allowed; }
+    .badge {
+      position: absolute; top: 20px; right: 20px;
+      font-size: 0.7rem; color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 2px 10px; border-radius: 50px;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer { text-align: center; padding-bottom: 40px; color: #444; font-size: 0.8rem; }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="LogoGwxVision.png" alt="GWX"> 
+      <span>GWX VISION GROUP</span>
+    </div>
+    <div class="social-nav">
+      <a href="https://www.instagram.com/gwx.group/"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="hero">
+      <h1>Estratégia, Visão e Tecnologia em um só ecossistema.</h1>
+      <p>O GWX Vision Group é o hub de inovação que sustenta e escala marcas de alto impacto.</p>
+    </header>
+
+    <span class="section-label">Nossas Unidades</span>
+    <div class="cards">
+      <div class="card">
+        <h3>GWX Representações</h3>
+        <p>Expertise comercial e expansão de mercado para marcas consolidadas.</p>
+        <a href="#">INDISPONIVEL →</a>
+      </div>
+
+      <div class="card">
+        <h3>GW Barber</h3>
+        <p>Excelência em estética masculina e experiência de consumo premium.</p>
+        <a href="#">INDISPONIVEL →</a>
+      </div>
+
+      <div class="card">
+        <h3>NextLoop Tecnologia</h3>
+        <p>Desenvolvimento de software e automações inteligentes com Python e SQL.</p>
+        <a href="https://www.nextloop.site/">SAIBA MAIS →</a>
+      </div>
+
+      <div class="card disabled">
+        <span class="badge">EM BREVE</span>
+        <h3>GWX Marketing</h3>
+        <p>Growth hacking e branding focado em resultados exponenciais.</p>
+        <a href="#" style="visibility: hidden;">BOTÃO INVISÍVEL</a> </div>
+
+    <div class="card disabled">
+        <span class="badge">EM BREVE</span>
+        <h3>GWX Data Consulting</h3>
+        <p>Consultoria de dados estratégica para o seu negócio.</p>
+        <a href="#" style="visibility: hidden;">BOTÃO INVISÍVEL</a> </div>
+    </div>
+
+    <section class="social-footer">
+      <h3>Conecte-se conosco</h3>
+      <p>Acompanhe nossa evolução nas redes oficiais</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/gwx.group/" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2026 GWX Vision Group. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
