@@ -1,9 +1,51 @@
 [
-    {
-      "id": 1,
-      "categoria": "Abrir Negócio",
-      "titulo": "Passo a passo para abrir seu MEI",
-      "data": "05/01/2026",
-      "conteudo": "<p>Abrir um MEI é o primeiro passo para formalizar seu negócio...</p><h3>Vantagens</h3><p>Você terá direito a benefícios do INSS e CNPJ próprio.</p>"
-    }
-  ]
+  {
+    "id": 1,
+    "categoria": "Abrir Negócio",
+    "titulo": "O que ninguém te conta sobre o MVP",
+    "data": "05/01/2026",
+    "conteudo": "<p>Abrir um negócio não exige um produto final impecável logo de cara. O conceito de <strong>MVP (Minimum Viable Product)</strong>, ou Produto Mínimo Viável, é a versão mais simples do seu negócio que permite validar a ideia com clientes reais.</p><p>Em vez de gastar meses no desenvolvimento, você foca no essencial para resolver o problema do cliente. Isso economiza recursos e evita que você crie algo que ninguém quer comprar.</p><p>A curiosidade aqui é que o Dropbox começou apenas com um vídeo demonstrativo como seu MVP. No empreendedorismo moderno, 'feito é melhor que perfeito' se você souber medir os resultados e pivotar quando necessário.</p>"
+  },
+  {
+    "id": 2,
+    "categoria": "Gestão",
+    "titulo": "Otimize processos com a Matriz de Eisenhower",
+    "data": "06/01/2026",
+    "conteudo": "<p>Gerir uma empresa é lidar com urgências constantes, mas nem tudo que é urgente é importante. A <strong>Matriz de Eisenhower</strong> divide suas tarefas em quatro quadrantes.</p><p>Os quadrantes são: Urgente/Importante (fazer agora), Não Urgente/Importante (agendar), Urgente/Não Importante (delegar) e Não Urgente/Não Importante (eliminar).</p><p>Um fato curioso: o nome vem de Dwight Eisenhower, 34º presidente dos EUA. Ao aplicar isso, você para de 'apagar incêndios' e começa a agir de forma estratégica, garantindo que o seu tempo seja bem investido.</p>"
+  },
+  {
+    "id": 3,
+    "categoria": "Dinheiro & Finanças",
+    "titulo": "Entenda o Burn Rate da sua operação",
+    "data": "07/01/2026",
+    "conteudo": "<p>Nas finanças corporativas, o <strong>Burn Rate</strong> (Taxa de Queima) é a velocidade com que uma empresa gasta seu capital disponível antes de gerar fluxo de caixa positivo.</p><p>Se você tem R$ 50 mil em caixa e gasta R$ 5 mil por mês além do que ganha, seu burn rate é de 5k/mês e sua empresa tem 10 meses de vida.</p><p>Uma curiosidade: muitas startups famosas operam com burn rates altíssimos por anos, dependendo de investimentos para sobreviver. Para o pequeno empreendedor, manter esse índice sob controle é a diferença entre o sono tranquilo e a falência.</p>"
+  },
+  {
+    "id": 4,
+    "categoria": "Carreira",
+    "titulo": "Lifelong Learning: A habilidade do futuro",
+    "data": "08/01/2026",
+    "conteudo": "<p>O conceito de <strong>Lifelong Learning</strong>, ou aprendizado contínuo, defende que a educação deve ser uma busca constante e voluntária ao longo de toda a vida profissional.</p><p>Com a evolução da IA e da automação, profissionais que não se atualizam perdem espaço rapidamente. Não se trata apenas de cursos, mas de curiosidade intelectual.</p><p>Um termo curioso nesse meio é o <em>Upskilling</em> (aprender novas habilidades para a mesma função). Quem adota essa postura deixa de ser um executor para se tornar um trabalhador do conhecimento valorizado.</p>"
+  },
+  {
+    "id": 5,
+    "categoria": "Gestão",
+    "titulo": "KPIs: A bússola do seu negócio",
+    "data": "09/01/2026",
+    "conteudo": "<p>Muitos empreendedores se perdem em métricas de vaidade. O que realmente importa são os <strong>KPIs (Key Performance Indicators)</strong>, ou Indicadores-Chave de Desempenho.</p><p>Eles são valores quantificáveis que mostram quão eficientemente uma empresa está alcançando seus objetivos. Se seu foco é venda, seu KPI principal pode ser a Taxa de Conversão.</p><p>Uma curiosidade técnica: para quem usa SQL, extrair KPIs direto do banco permite uma visão em tempo real. Ter KPIs definidos permite tomar decisões baseadas em fatos e não em achismos.</p>"
+  },
+  {
+    "id": 6,
+    "categoria": "Dinheiro & Finanças",
+    "titulo": "O que é o Break-even Point?",
+    "data": "10/01/2026",
+    "conteudo": "<p>O <strong>Break-even Point</strong>, ou Ponto de Equilíbrio, é o momento em que as receitas totais de uma empresa se igualam às suas despesas totais.</p><p>Nesse ponto, não há lucro nem prejuízo; a partir de um real acima disso, você começa a lucrar de fato. É o primeiro grande marco de qualquer negócio.</p><p>Curiosidade: o cálculo leva em conta custos fixos e variáveis. Entender onde está o seu 'zero a zero' dá clareza sobre o esforço de vendas necessário para sair do vermelho e atingir a sustentabilidade financeira.</p>"
+  },
+  {
+    "id": 7,
+    "categoria": "Abrir Negócio",
+    "titulo": "Oceano Azul: Fuja da concorrência predatória",
+    "data": "11/01/2026",
+    "conteudo": "<p>A <strong>Estratégia do Oceano Azul</strong> sugere que empresas devem buscar mercados inexplorados em vez de competir em mercados saturados (Oceanos Vermelhos).</p><p>No oceano azul, você cria uma nova demanda e torna a concorrência irrelevante. Um exemplo clássico e curioso é o Cirque du Soleil, que reinventou o circo misturando-o ao teatro.</p><p>Para quem está começando, a inovação em valor é o segredo para se destacar sem precisar baixar o preço ao nível da sobrevivência, criando um nicho onde você dita as regras.</p>"
+  }
+]
