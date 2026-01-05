@@ -32,13 +32,13 @@
       z-index: -1;
     }
 
-    /* NAVBAR AJUSTADA */
+    /* NAVBAR */
     nav {
       position: fixed;
       top: 0; width: 100%;
-      padding: 10px 5%;
+      padding: 15px 5%;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       z-index: 1000;
       backdrop-filter: blur(15px);
@@ -46,7 +46,7 @@
     }
 
     .logo {
-      height: 60px;
+      height: 50px;
       display: flex;
       align-items: center;
       gap: 15px;
@@ -54,26 +54,16 @@
 
     .logo img { height: 100%; border-radius: 50%; }
     
-    /* Nome da empresa maior */
     .logo span { 
       font-weight: 600; 
       letter-spacing: 2px; 
-      font-size: 1.4rem; /* Aumentado */
+      font-size: 1.4rem; 
       white-space: nowrap;
     }
 
-    .social-nav a {
-      color: #fff;
-      margin-left: 20px;
-      font-size: 1.2rem;
-      transition: 0.3s;
-      opacity: 0.7;
-    }
-
-    .social-nav a:hover { color: var(--primary); opacity: 1; transform: translateY(-3px); }
-
+    /* CONTAINER */
     .container {
-      max-width: 1200px; /* Aumentado para comportar cards maiores */
+      max-width: 1200px;
       margin: auto;
       padding: 150px 20px 80px;
     }
@@ -96,20 +86,34 @@
 
     .hero p { font-size: 1.2rem; color: #a0a0a0; }
 
-    /* CARDS AJUSTADOS */
+    /* SEÇÕES */
     .section-label {
       color: var(--primary);
       text-transform: uppercase;
       letter-spacing: 3px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin-bottom: 40px;
       display: block;
       text-align: center;
     }
 
+    .section-label::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--primary);
+      margin: 10px auto 0;
+    }
+
+    .section-divider {
+      margin-top: 100px;
+    }
+
+    /* CARDS */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Largura mínima aumentada */
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 25px;
     }
 
@@ -119,10 +123,10 @@
       padding: 40px;
       border-radius: 24px;
       transition: 0.4s;
-      position: relative;
-      display: flex; /* Flexbox para alinhar conteúdo */
+      display: flex;
       flex-direction: column;
-      min-height: 220px; /* Garante altura uniforme mínima */
+      min-height: 260px;
+      position: relative;
     }
 
     .card:hover {
@@ -131,12 +135,16 @@
       transform: translateY(-8px);
     }
 
-    .card h3 { font-size: 1.6rem; margin-bottom: 15px; white-space: nowrap; }
+    .card h3 { 
+      font-size: 1.4rem; 
+      margin-bottom: 15px; 
+      white-space: nowrap; 
+    }
+
     .card p { color: #888; margin-bottom: 25px; font-size: 0.95rem; }
     
-    /* BOTÃO FIXO NO RODAPÉ DO CARD */
     .card a {
-      margin-top: auto; /* Joga o botão para baixo */
+      margin-top: auto;
       color: var(--primary);
       font-weight: 600;
       text-decoration: none;
@@ -147,6 +155,16 @@
 
     .card a:hover { letter-spacing: 2px; }
 
+    /* BADGE & DISABLED */
+    .disabled { opacity: 0.4; cursor: not-allowed; }
+    .badge {
+      position: absolute; top: 20px; right: 20px;
+      font-size: 0.7rem; color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 2px 10px; border-radius: 50px;
+    }
+
+    /* FOOTER */
     .social-footer {
       margin-top: 100px;
       text-align: center;
@@ -176,14 +194,6 @@
       transform: scale(1.1);
     }
 
-    .disabled { opacity: 0.4; cursor: not-allowed; }
-    .badge {
-      position: absolute; top: 20px; right: 20px;
-      font-size: 0.7rem; color: var(--primary);
-      border: 1px solid var(--primary);
-      padding: 2px 10px; border-radius: 50px;
-    }
-
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -200,11 +210,6 @@
       <img src="LogoGwxVision.png" alt="GWX"> 
       <span>GWX VISION GROUP</span>
     </div>
-    <div class="social-nav">
-      <a href="https://www.instagram.com/gwx.group/"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-    </div>
   </nav>
 
   <div class="container">
@@ -213,37 +218,62 @@
       <p>O GWX Vision Group é o hub de inovação que sustenta e escala marcas de alto impacto.</p>
     </header>
 
-    <span class="section-label">Nossas Unidades</span>
+    <span class="section-label">Unidades de Negócio</span>
     <div class="cards">
-      <div class="card">
-        <h3>GWX Representações</h3>
-        <p>Expertise comercial e expansão de mercado para marcas consolidadas.</p>
-        <a href="#">INDISPONIVEL →</a>
-      </div>
-
-      <div class="card">
-        <h3>GW Barber</h3>
-        <p>Excelência em estética masculina e experiência de consumo premium.</p>
-        <a href="#">INDISPONIVEL →</a>
-      </div>
-
       <div class="card">
         <h3>NextLoop Tecnologia</h3>
         <p>Desenvolvimento de software e automações inteligentes com Python e SQL.</p>
         <a href="https://www.nextloop.site/">SAIBA MAIS →</a>
       </div>
 
+      <div class="card">
+        <h3>GWX Representações</h3>
+        <p>Expertise comercial e expansão de mercado para marcas consolidadas.</p>
+        <a href="#">INDISPONÍVEL →</a>
+      </div>
+
+      <div class="card">
+        <h3>GW Barber</h3>
+        <p>Excelência em estética masculina e experiência de consumo premium.</p>
+        <a href="#">INDISPONÍVEL →</a>
+      </div>
+
       <div class="card disabled">
         <span class="badge">EM BREVE</span>
         <h3>GWX Marketing</h3>
         <p>Growth hacking e branding focado em resultados exponenciais.</p>
-        <a href="#" style="visibility: hidden;">BOTÃO INVISÍVEL</a> </div>
+        <a href="#" style="visibility: hidden;">BOTÃO INVISÍVEL</a> 
+      </div>
 
-    <div class="card disabled">
+      <div class="card disabled">
         <span class="badge">EM BREVE</span>
         <h3>GWX Data Consulting</h3>
         <p>Consultoria de dados estratégica para o seu negócio.</p>
-        <a href="#" style="visibility: hidden;">BOTÃO INVISÍVEL</a> </div>
+        <a href="#" style="visibility: hidden;">BOTÃO INVISÍVEL</a> 
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <span class="section-label">Serviços & Acessos</span>
+      <div class="cards">
+        <div class="card">
+          <h3>Sistemas ERP</h3>
+          <p>Acesse nossas soluções de gestão financeira e automação empresarial.</p>
+          <a href="#">ACESSAR SISTEMAS →</a>
+        </div>
+
+        <div class="card">
+          <h3>GWX Blog</h3>
+          <p>Conteúdo exclusivo sobre tecnologia, gestão e o futuro dos negócios.</p>
+          <a href="blog.html">LER ARTIGOS →</a>
+        </div>
+
+        <div class="card">
+          <h3>Contato & Orçamentos</h3>
+          <p>Fale com nosso time para tirar dúvidas ou solicitar propostas personalizadas.</p>
+          <a href="https://wa.me/SEUNUMERO">ENTRAR EM CONTATO →</a>
+        </div>
+      </div>
     </div>
 
     <section class="social-footer">
