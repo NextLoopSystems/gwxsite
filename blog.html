@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog | GWX VISION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="LogoGwxVision.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #c9a24d;
+      --bg: #050505;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background-color: var(--bg);
+      color: #ffffff;
+      line-height: 1.8;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 10% 10%, #1a150a 0%, transparent 30%);
+      z-index: -1;
+    }
+
+    /* NAVBAR AJUSTADA */
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      height: 40px;
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none; color: #fff;
+    }
+    .logo img { height: 100%; border-radius: 50%; }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-links a:hover { color: var(--primary); border-bottom: 1px solid var(--primary); }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 140px 20px 60px;
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .blog-header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #fff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* CATEGORIAS NÃO FIXAS */
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      /* Removido o sticky para não acompanhar o scroll */
+    }
+
+    .cat-btn {
+      background: #111;
+      border: 1px solid var(--border);
+      color: #888;
+      padding: 8px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 0.8rem;
+    }
+
+    .cat-btn.active, .cat-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(201, 162, 77, 0.1);
+    }
+
+    .feed-container {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .article-block {
+      animation: fadeIn 0.6s ease;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 60px;
+    }
+
+    .article-block:last-child { border: none; }
+
+    .post-meta {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .article-block h2 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .post-date {
+      color: #555;
+      font-size: 0.85rem;
+      margin-bottom: 30px;
+      display: block;
+    }
+
+    .post-body {
+      color: #ccc;
+      font-size: 1.1rem;
+    }
+
+    .post-body p { margin-bottom: 20px; }
+    .post-body h3 { color: #fff; margin: 30px 0 15px; }
+
+    .loading-msg { text-align: center; color: var(--primary); font-size: 1.2rem; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 0;
+      color: #444;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="LogoGwxVision.png" alt="GWX"> 
+      <span>GWX BLOG</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html"><i class="fas fa-home"></i> Página Inicial</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="blog-header">
+      <h1>Central de Conhecimento</h1>
+      <p style="color:#666">Conteúdo completo para quem quer crescer.</p>
+    </header>
+
+    <div class="categories">
+      <button class="cat-btn active">Tudo</button>
+      <button class="cat-btn">Abrir Negócio</button>
+      <button class="cat-btn">Dicas de Gestão</button>
+      <button class="cat-btn">Dinheiro & Finanças</button>
+      <button class="cat-btn">Carreira</button>
+    </div>
+
+    <div id="feed" class="feed-container">
+      <p class="loading-msg">Carregando conteúdos...</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 GWX Vision Group.
+  </footer>
+
+  <script>
+    const feed = document.getElementById('feed');
+    const buttons = document.querySelectorAll('.cat-btn');
+
+    async function loadFeed() {
+      try {
+        const response = await fetch('posts.json');
+        let posts = await response.json();
+        
+        posts.sort((a, b) => b.id - a.id);
+
+        function render(filter = 'Tudo') {
+          feed.innerHTML = '';
+          const filtered = filter === 'Tudo' 
+            ? posts 
+            : posts.filter(p => p.categoria === filter);
+
+          if (filtered.length === 0) {
+            feed.innerHTML = '<p class="loading-msg">Ainda não temos conteúdos para esta categoria.</p>';
+            return;
+          }
+
+          filtered.forEach(post => {
+            feed.innerHTML += `
+              <article class="article-block">
+                <span class="post-meta">${post.categoria}</span>
+                <h2>${post.titulo}</h2>
+                <span class="post-date">Postado em ${post.data}</span>
+                <div class="post-body">
+                  ${post.conteudo}
+                </div>
+              </article>
+            `;
+          });
+        }
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            render(btn.textContent.trim());
+          });
+        });
+
+        render();
+      } catch (error) {
+        feed.innerHTML = '<p class="loading-msg">Erro ao carregar o arquivo posts.json.</p>';
+      }
+    }
+
+    loadFeed();
+  </script>
+</body>
+</html>
